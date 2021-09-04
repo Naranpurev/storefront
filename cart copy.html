@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+			crossorigin="anonymous"
+		/>
+		<!-- FontAwesome  -->
+		<script
+			src="https://kit.fontawesome.com/e63d2cb5f7.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel='icon' href='assets/logo.png' type='image/x-icon'/ >
+		<title>Your shopping bag | TRENDY</title>
+	</head>
+	<body class="bg-light">
+		<!-- Navbar  -->
+		<nav class="navbar sticky-top navbar-expand-md navbar-light bg-light">
+			<div class="container">
+				<a class="navbar-brand" href="index.html"
+					><img class="logo" src="assets/logo.png" alt="logo" /><b>
+						TRENDY</b
+					></a
+				>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav m-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link px-3 activePage" href="index.html">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link px-3" href="women.html">Women</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link px-3" href="men.html">Men</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link px-3" href="about.html">About</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link px-3" href="contact.html">Contact</a>
+						</li>
+					</ul>
+					<ul id="searchMenu" class="navbar-nav mr-auto mb-2 mb-lg-0">
+						<li class="nav-item position-relative" id="loginTrigger">
+							<a class="nav-link" href="login.html"
+								><i class="far fa-user"></i
+							></a>
+						</li>
+						<li class="nav-item" onclick="InputTrigger()">
+							<a class="nav-link" href="#"><i class="fas fa-search"></i></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#"
+								><i class="fas fa-shopping-cart"></i
+							></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- Checkout  -->
+		<div class="container shoppingCart">
+			<h3 class="text-center my-4">YOUR BAG</h3>
+			<div class="row cartMenus border-bottom pb-3">
+				<div class="col d-none d-md-block">
+					<button class="btn btn-dark">CONTINUE SHOPPING</button>
+				</div>
+				<div class="d-flex col gap-4 justify-content-center">
+					<a class="text-decoration-none text-dark" href="#"
+						>Shopping Bag (1)</a
+					>
+					<a class="text-decoration-none text-dark" href="#"
+						>Your Wishlist (0)</a
+					>
+				</div>
+				<div class="col justify-content-end d-none d-md-flex">
+					<button class="btn btn-dark">CHECKOUT NOW</button>
+				</div>
+			</div>
+			<div class="row cartContent mt-4">
+				<div class="row col-lg-9 col-md-12 col-sm-12">
+					<div class="col-md-6 col-sm-9">
+						<div class="productInCart d-flex justify-content-around">
+							<img
+								class="img-fluid"
+								src="https://cdn.shopify.com/s/files/1/0267/9232/9325/products/DB2576-001-1_1800x1800.jpg?v=1628154927"
+								alt="product"
+							/>
+							<div>
+								<h6>AIR FORCE 1/1 LOW</h6>
+								<small class="text-muted">STYLE#: DB2576-001</small>
+								<p class="text-dark">$140.00</p>
+								<div class="d-flex gap-3 mb-3">
+									<div class="colorOptions bg-primary"></div>
+									<div class="colorOptions bg-warning"></div>
+								</div>
+								<p><b> Size 6.0</b></p>
+								<div class="d-flex justify-content-between">
+									<p><i class="far fa-heart"></i> Save</p>
+									<p class="border-bottom">Edit</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-3 text-center">
+						<p class="lead">Only 1 in stock</p>
+					</div>
+					<div class="col-md-3 col-sm-12 d-flex flex-column">
+						<button
+							type="button"
+							class="btn btn-close-icon align-self-center p-0"
+							aria-label="Close"
+						>
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+				</div>
+				<div
+					id="orderSummary"
+					style="background-color: rgba(117, 117, 117, 0.103)"
+					class="col-lg-3 col-md-12 p-3"
+				>
+					<div class="orderSummary">
+						<h5>ORDER SUMMARY</h5>
+						<div class="totalCost border-bottom pb-2">
+							<p class="m-0">Subtotal</p>
+							<p class="m-0 text-muted">$140.00</p>
+						</div>
+						<div class="totalCost border-bottom py-2">
+							<p class="m-0">Estimated Shipping</p>
+							<p class="m-0 text-muted">From $0.00</p>
+						</div>
+						<div class="totalCost py-2">
+							<p><b>Estimated Total</b></p>
+							<p class="text-dark"><b>$140.00</b></p>
+						</div>
+						<button class="btn btn-light d-block w-100 mb-3">
+							<i class="fab fa-paypal"></i>
+						</button>
+						<button class="btn btn-dark d-block w-100">CHECKOUT NOW</button>
+					</div>
+					<div class="afterPay bg-light p-3 my-3">
+						<img
+							width="130px"
+							src="./assets/afterpay-logo-png-black-transparent.png"
+							class="img-fluid my-2"
+							alt="afterPay"
+						/>
+						<p class="interest">
+							4 interest-free payments of $35.00 every two weeks
+							<a class="text-decoration-none" href="#">LEARN MORE</a>
+						</p>
+						<small><b> Payment methods</b></small>
+						<img
+							width="200px"
+							class="img-fluid"
+							src="./assets/paymentMethods.png"
+							alt="cards"
+						/>
+					</div>
+					<p class="text-muted shipping">
+						Order now and get it by Wed Aug 11 (excludes Pre-order and
+						Made-to-Order items) with FREE 2-Day Shipping.
+						<u>Learn more | Sign in</u>
+					</p>
+				</div>
+			</div>
+		</div>
+		<!-- Section: How We Ship  -->
+		<div class="row container m-auto delivery my-5">
+			<div
+				style="background-color: rgba(117, 117, 117, 0.103)"
+				class="
+					d-flex d-none d-sm-flex
+					col-md-12 col-lg-9
+					border-end border-white border-5
+				"
+			>
+				<div class="border-end border-dark text-center p-4">
+					<p>Enjoy complimentary US ground shipping on all orders</p>
+					<a
+						class="text-decoration-none border-bottom border-dark text-dark"
+						href="#"
+						>Delivery & Returns</a
+					>
+				</div>
+				<div class="text-center p-4">
+					<p>US Ground: Complimentary (2-7 working days, NY 2-3)</p>
+					<p>
+						US Express: $20 (1-3 working days, NY 1-2) New York Same Day: $25
+					</p>
+					<p>Americas: <del>$30</del> Complimentary (2-7 working days)</p>
+				</div>
+			</div>
+			<div
+				style="background-color: rgba(117, 117, 117, 0.103)"
+				class="p-4 col-md-12 col-lg-3 text-center"
+			>
+				<p class="mb-3">Need help?</p>
+				<p>Speak to a luxury shopping expert or call Customer Services</p>
+				<p><i class="fas fa-mobile-alt"></i> 1-202-603-4371</p>
+			</div>
+		</div>
+
+		<!-- Arrivals  -->
+		<div class="container mb-5 position-relative d-flex flex-column">
+			<div class="top">
+				<p class="text-muted m-0">You May Also Like</p>
+				<div class="underline"></div>
+				<h4><b> NEW ARRIVALS</b></h4>
+			</div>
+			<div class="row">
+				<div class="card col-md-3">
+					<img
+						src="https://cdn.shopify.com/s/files/1/0267/9232/9325/products/S48638-001-1_1800x1800.jpg?v=1627116786"
+						class="card-img-top"
+						alt="snapback"
+					/>
+					<div class="card-body">
+						<p class="card-text smallText text-muted">ADIDAS ACCESSORIES</p>
+						<p class="card-text fw-bold">Trefoil Chain Snapback</p>
+						<small class="text-muted">$28.00</small>
+					</div>
+				</div>
+				<div class="card col-md-3">
+					<img
+						src="https://cdn.shopify.com/s/files/1/0267/9232/9325/products/1095119-PKRS-1_1800x1800.jpg?v=1627118205"
+						class="card-img-top"
+						alt="ugg"
+					/>
+					<div class="card-body">
+						<p class="card-text smallText text-muted">UGG</p>
+						<p class="card-text fw-bold">Fluff Yeah Slides</p>
+						<small class="text-muted">$100.00</small>
+					</div>
+				</div>
+				<div class="card col-md-3">
+					<img
+						src="https://cdn.shopify.com/s/files/1/0267/9232/9325/products/CI7850-800-1_1800x1800.jpg?v=1627118195"
+						class="card-img-top"
+						alt="jordan"
+					/>
+					<div class="card-body">
+						<p class="card-text smallText text-muted">JORDAN</p>
+						<p class="card-text fw-bold">Flare Sandals</p>
+						<small class="text-muted">$35.00</small>
+					</div>
+				</div>
+				<div class="card col-md-3">
+					<img
+						src="https://cdn.shopify.com/s/files/1/0267/9232/9325/products/S24128-1_1800x1800.jpg?v=1627118183"
+						class="card-img-top"
+						alt="snapback"
+					/>
+					<div class="card-body">
+						<p class="card-text smallText text-muted">ADIDAS</p>
+						<p class="card-text fw-bold">Top Ten Low</p>
+						<small class="text-muted">$85.00</small>
+					</div>
+				</div>
+			</div>
+			<button type="button" class="btn btn-dark mt-3 align-self-center">
+				VIEW ALL
+			</button>
+		</div>
+		<!-- FOOTER   -->
+		<div class="footer bg-dark py-5">
+			<div class="container text-white">
+				<div class="newsletter row d-flex py-5">
+					<div class="col-md-6">
+						<h4><b> SIGN UP AND SAVE</b></h4>
+						<small>
+							Subscribe to get special offers, free giveaways, and
+							once-in-a-lifetime deals.</small
+						>
+					</div>
+					<div class="col-md-6">
+						<p>EMAIL ADDRESS</p>
+						<div class="input-group mb-3">
+							<input
+								type="text"
+								class="form-control"
+								placeholder="Enter your email"
+								aria-label="Recipient's username"
+								aria-describedby="button-addon2"
+							/>
+							<button
+								class="btn btn-outline-light"
+								type="button"
+								id="button-addon2"
+							>
+								SIGN UP
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="siteMap py-5 d-none d-md-block d-lg-block">
+					<div class="row">
+						<div class="col-md-3">
+							<h6 class="pb-4"><b> RESOURCES</b></h6>
+							<ul class="navbar-nav m-auto text-white mb-2 mb-lg-0">
+								<li class="nav-item">
+									<a class="nav-link text-white" href="#">Store Locator</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link text-white" href="#">Release Calendar</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link text-white" href="#">Reviews</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-md-3">
+							<h6 class="pb-4"><b> HELP</b></h6>
+							<ul class="navbar-nav m-auto text-white mb-2 mb-lg-0">
+								<li class="nav-item">
+									<a class="nav-link text-white" href="#">Customer Service</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link text-white" href="#">Help Center</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link text-white" href="#">Track Your Order</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link text-white" href="#">Returns</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link text-white" href="#">Contact Us</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-md-3">
+							<h6 class="pb-4"><b> COMPANY</b></h6>
+							<ul class="navbar-nav m-auto text-white mb-2 mb-lg-0">
+								<li class="nav-item">
+									<a class="nav-link text-white" href="#">About Us</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link text-white" href="#">Community</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link text-white" href="#">Careers</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link text-white" href="#">Accessibility</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link text-white" href="#">Privacy Policy</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link text-white" href="#"
+										>Terms and Conditions</a
+									>
+								</li>
+							</ul>
+						</div>
+						<div class="col-md-3">
+							<h6 class="pb-4"><b> CONNECT WITH US</b></h6>
+							<ul class="navbar-nav m-auto text-white mb-2 mb-lg-0">
+								<li class="nav-item">
+									<a class="nav-link text-white" href="#">Facebook</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link text-white" href="#">Instagram</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link text-white" href="#">Twitter</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link text-white" href="#">Youtube</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="socialIcons">
+				<div class="icons container d-flex justify-content-between">
+					<div>
+						<h5 class="text-white pb-3"><b> FOLLOW US</b></h5>
+						<ul class="d-flex p-0">
+							<li class="nav-item">
+								<a href="#" class="nav-link text-white"
+									><i class="fab fa-facebook-f"></i
+								></a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link text-white"
+									><i class="fab fa-twitter"></i
+								></a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link text-white"
+									><i class="fab fa-instagram"></i
+								></a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link text-white"
+									><i class="fab fa-youtube"></i
+								></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+			crossorigin="anonymous"
+		></script>
+		<script src="js/app.js"></script>
+	</body>
+</html>

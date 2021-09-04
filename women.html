@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Bootstrap  -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+			crossorigin="anonymous"
+		/>
+		<!-- FontAwesome  -->
+		<script
+			src="https://kit.fontawesome.com/e63d2cb5f7.js"
+			crossorigin="anonymous"
+		></script>
+		<!-- AOS animation  -->
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+		<!-- Main CSS  -->
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel='icon' href='assets/logo.png' type='image/x-icon'/ >
+		<title>Trendy | Shoes, Streetwear, Sportswear & Designer Clothes</title>
+	</head>
+	<body>
+		<!-- Navbar  -->
+		<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+			<div class="container">
+				<a class="navbar-brand" href="index.html"
+					><img class="logo" src="assets/logo.png" alt="logo" /><b>
+						TRENDY</b
+					></a
+				>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav m-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link px-3" href="index.html">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link px-3 activePage" href="women.html">Women</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link px-3" href="men.html">Men</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link px-3" href="about.html">About</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link px-3" href="contact.html">Contact</a>
+						</li>
+					</ul>
+					<ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link" href="login.html"
+								><i class="far fa-user"></i
+							></a>
+						</li>
+						<li class="nav-item" onclick="InputTrigger()">
+							<a class="nav-link" href="#"><i class="fas fa-search"></i></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#"
+								><i class="fas fa-shopping-cart"></i
+							></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- HiddenSearchArea  -->
+		<div
+			id="inputs"
+			class="enabledInput"
+			data-aos="fade-down"
+			data-aos-delay="10"
+		>
+			<div class="container">
+				<a href="#"><i class="fas fa-search"></i></a>
+				<input
+					class="searchInput"
+					type="search"
+					placeholder="Search our store"
+				/>
+			</div>
+		</div>
+		<!-- Overlay  -->
+		<div id="overlay" class="enabledOverlay"></div>
+		<!-- Showcase  -->
+		<div class="showcase position-relative">
+			<div class="overlay"></div>
+			<img
+				src="https://images.unsplash.com/photo-1622495893617-38b112b30790?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1099&q=80"
+				alt="showcase"
+			/>
+			<div class="showcasetext">
+				<h1 class="text-white"><b>NEW ARRIVALS</b></h1>
+				<button id="shopWomen" class="btn btn-light px-5 my-4">SHOP NOW</button>
+			</div>
+		</div>
+		<!-- List of Products  -->
+		<div class="row products bg-secondary m-auto"></div>
+		<!-- WOMEN FASHION  -->
+		<div class="fashion my-4">
+			<div class="container">
+				<h1 class="text-center"><b> WOMEN'S FASHION</b></h1>
+				<p class="text-muted text-center py-2">
+					Find the latest women’s footwear and apparel. Shop from Nike, adidas,
+					Puma, UGG, and more.
+				</p>
+				<div class="row">
+					<div class="col-sm-12 eachFashion pb-2">
+						<img
+							src="https://images.unsplash.com/photo-1580828343064-fde4fc206bc6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80"
+							alt="sale"
+						/>
+						<h5 class="pt-2"><b> NIKE & JORDAN STARTING AT 25% OFF</b></h5>
+						<a class="text-dark" href="#">SHOP NOW</a>
+					</div>
+					<div class="col-sm-12 eachFashion pb-2">
+						<img
+							src="https://images.unsplash.com/photo-1503342452485-86b7f54527ef?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+							alt="sale"
+						/>
+						<h5 class="pt-2"><b> NEW FROM NIKE</b></h5>
+						<a class="text-dark" href="#">SHOP NOW</a>
+					</div>
+					<div class="col-sm-12 eachFashion pb-2">
+						<img
+							src="https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+							alt="sale"
+						/>
+						<h5 class="pt-2"><b> NEW FROM PUMA</b></h5>
+						<a class="text-dark" href="#">SHOP NOW</a>
+					</div>
+					<div class="col-sm-12 eachFashion pb-2">
+						<img
+							src="https://images.unsplash.com/photo-1549298916-f52d724204b4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1001&q=80"
+							alt="sale"
+						/>
+						<h5 class="pt-2"><b>FOOTWEAR FOR HER</b></h5>
+						<a class="text-dark" href="#">SHOP NOW</a>
+					</div>
+					<div class="col-sm-12 eachFashion pb-2">
+						<img
+							src="https://images.unsplash.com/photo-1514813279845-a4455283689a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+							alt="sale"
+						/>
+						<h5 class="pt-2"><b>TEES</b></h5>
+						<a class="text-dark" href="#">SHOP NOW</a>
+					</div>
+					<div class="col-sm-12 eachFashion pb-2">
+						<img
+							src="https://images.unsplash.com/photo-1544715296-426568d8b9db?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+							alt="sale"
+						/>
+						<h5 class="pt-2"><b>SHORTS</b></h5>
+						<a class="text-dark" href="#">SHOP NOW</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- ARRIVALS  -->
+		<div class="container position-relative d-flex flex-column mb-5">
+			<div class="top">
+				<h4><b> NEW ARRIVALS</b></h4>
+				<p class="text-muted m-0 text-decoration-underline">SEE ALL</p>
+			</div>
+			<div class="row">
+				<div class="col-md-3 mb-3">
+					<img
+						src="https://cdn.shopify.com/s/files/1/0267/9232/9325/products/1095119-PKRS-4_2048x2048.jpg?v=1627118211"
+						class="img-fluid"
+						alt="snapback"
+					/>
+					<small class="fw-bold text-center">FLUFF YEAH SLIDES</small>
+				</div>
+				<div class="col-md-3 mb-3">
+					<img
+						src="https://cdn.shopify.com/s/files/1/0267/9232/9325/products/DD5029-010-4_2048x2048.jpg?v=1627118116"
+						class="img-fluid"
+						alt="snapback"
+					/>
+					<small class="fw-bold text-center"
+						>WOMENS NSW ICON CLASH JOGGERS</small
+					>
+				</div>
+				<div class="col-md-3 mb-3">
+					<img
+						src="https://cdn.shopify.com/s/files/1/0267/9232/9325/products/DD5031-673-5_2048x2048.jpg?v=1627118105"
+						class="img-fluid"
+						alt="snapback"
+					/>
+					<small class="fw-bold text-center"
+						>W NSW ICON CLASH LONG SLEEVE TEE</small
+					>
+				</div>
+				<div class="col-md-3 mb-3">
+					<img
+						src="https://cdn.shopify.com/s/files/1/0267/9232/9325/products/DD8713-695-3_2048x2048.jpg?v=1627118075"
+						class="img-fluid"
+						alt="snapback"
+					/>
+					<small class="fw-bold text-center"
+						>NSW ESSENTIAL FLEECE CARGO PANTS</small
+					>
+				</div>
+			</div>
+			<div class="row mt-5">
+				<div class="col-md-4 accessories mb-3">
+					<img
+						src="https://images.unsplash.com/photo-1494578379344-d6c710782a3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+						class="img-fluid mb-2"
+					/>
+					<h4><b>DRESSES</b></h4>
+					<small class="text-muted"
+						>Shop the latest sneakers from brands like Nike, adidas, PUMA, New
+						Balance, Converse, and more.</small
+					>
+					<a href="#" class="text-decoration-underline text-dark">SHOP NOW</a>
+				</div>
+				<div class="col-md-4 accessories mb-3">
+					<img
+						src="https://images.unsplash.com/photo-1571745523315-f917e8cfe065?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1100&q=80"
+						class="img-fluid mb-2"
+						alt="snapback"
+					/>
+					<h4><b>SWEATSHIRTS</b></h4>
+					<small class="text-muted"
+						>Shop the latest men’s shorts from brands like Nike, adidas,
+						Champion, Jordan, and more.</small
+					>
+					<a href="#" class="text-decoration-underline text-dark">SHOP NOW</a>
+				</div>
+				<div class="col-md-4 accessories">
+					<img
+						src="https://images.unsplash.com/photo-1544511196-1646449a253b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+						class="img-fluid w-100 mb-2"
+						alt="snapback"
+					/>
+					<h4><b>ACCESSORIES</b></h4>
+					<small class="text-muted"
+						>Shop the latest men’s accessories from brands like Jordan, Nike,
+						Champion, PUMA, New Era, and more.</small
+					>
+					<a href="#" class="text-decoration-underline text-dark">SHOP NOW</a>
+				</div>
+			</div>
+		</div>
+		<!-- FOOTER   -->
+		<div class="footer bg-dark py-5">
+			<div class="container text-white">
+				<div class="newsletter row d-flex py-5">
+					<div class="col-md-6">
+						<h4><b> SIGN UP AND SAVE</b></h4>
+						<small>
+							Subscribe to get special offers, free giveaways, and
+							once-in-a-lifetime deals.</small
+						>
+					</div>
+					<div class="col-md-6">
+						<p>EMAIL ADDRESS</p>
+						<div class="input-group mb-3">
+							<input
+								type="text"
+								class="form-control"
+								placeholder="Enter your email"
+								aria-label="Recipient's username"
+								aria-describedby="button-addon2"
+							/>
+							<button
+								class="btn btn-outline-light"
+								type="button"
+								id="button-addon2"
+							>
+								SIGN UP
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="siteMap py-5 d-none d-md-block d-lg-block">
+					<div class="row">
+						<div class="col-md-3">
+							<h6 class="pb-4"><b> RESOURCES</b></h6>
+							<ul class="navbar-nav m-auto text-white mb-2 mb-lg-0">
+								<li class="nav-item">
+									<a class="nav-link text-white" href="#">Store Locator</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link text-white" href="#">Release Calendar</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link text-white" href="#">Reviews</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-md-3">
+							<h6 class="pb-4"><b> HELP</b></h6>
+							<ul class="navbar-nav m-auto text-white mb-2 mb-lg-0">
+								<li class="nav-item">
+									<a class="nav-link text-white" href="#">Customer Service</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link text-white" href="#">Help Center</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link text-white" href="#">Track Your Order</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link text-white" href="#">Returns</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link text-white" href="#">Contact Us</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-md-3">
+							<h6 class="pb-4"><b> COMPANY</b></h6>
+							<ul class="navbar-nav m-auto text-white mb-2 mb-lg-0">
+								<li class="nav-item">
+									<a class="nav-link text-white" href="#">About Us</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link text-white" href="#">Community</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link text-white" href="#">Careers</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link text-white" href="#">Accessibility</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link text-white" href="#">Privacy Policy</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link text-white" href="#"
+										>Terms and Conditions</a
+									>
+								</li>
+							</ul>
+						</div>
+						<div class="col-md-3">
+							<h6 class="pb-4"><b> CONNECT WITH US</b></h6>
+							<ul class="navbar-nav m-auto text-white mb-2 mb-lg-0">
+								<li class="nav-item">
+									<a class="nav-link text-white" href="#">Facebook</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link text-white" href="#">Instagram</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link text-white" href="#">Twitter</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link text-white" href="#">Youtube</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="socialIcons">
+				<div class="icons container d-flex justify-content-between">
+					<div>
+						<h5 class="text-white pb-3"><b> FOLLOW US</b></h5>
+						<ul class="d-flex p-0">
+							<li class="nav-item">
+								<a href="#" class="nav-link text-white"
+									><i class="fab fa-facebook-f"></i
+								></a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link text-white"
+									><i class="fab fa-twitter"></i
+								></a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link text-white"
+									><i class="fab fa-instagram"></i
+								></a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link text-white"
+									><i class="fab fa-youtube"></i
+								></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<p class="text-white text-center">&copy 2021 TRENDY</p>
+		</div>
+
+		<!-- Bootstrap JS   -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+			crossorigin="anonymous"
+		></script>
+		<!-- AOS ANIMATION  -->
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script>
+			AOS.init();
+		</script>
+		<script src="./js/app.js"></script>
+	</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "storefront",
+  "version": "1.0.0",
+  "main": "./js/app.js",
+  "dependencies": {
+    "nodemon": "^2.0.12"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "watch": "nodemon",
+    "build": "npm build"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
